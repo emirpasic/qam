@@ -29,7 +29,7 @@ Technology stack (reasoning):
 - [ ] Partial templates
 - [ ] Error handling (40x, 50x)
 - [ ] Javascript compilation and injection
-- [ ] Caching
+- [ ] Caching (Nginx reverse proxy cache, S3, Memcached or files)
 - [ ] Automatic Javascript builds in development
 - [ ] Automatic CSS builds in development
 - [ ] Automatic server restarts in development
