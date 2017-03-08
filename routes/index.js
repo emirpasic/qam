@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
-    res.send('Home Page');
+    res.render('index/index', {title: 'Node.js website boilerplate'});
 });
 
 module.exports = router;

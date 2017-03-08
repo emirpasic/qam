@@ -20,7 +20,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', rr('routes/index'));
 app.use('/about', rr('routes/about'));
 
-
 app.listen(config.server.port, () => {
     logger.info(`Server listening on port ${config.server.port}`);
 });

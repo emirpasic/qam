@@ -23,10 +23,10 @@ Technology stack (reasoning):
 - [x] IBM's StrongLoop PM for spawning multiple processes (more processes for more throughput using enterprise grade process management system)
 - [x] Logging with winston and winston-express
 - [x] Configurations
-- [ ] Routing
+- [x] Routing
+- [x] EJS for templates (popular and advanced)
 - [ ] Error handling (40x, 50x)
 - [ ] LESS for CSS (less is more)
-- [ ] EJS for templates (popular and advanced)
 - [ ] Automatic Javascript builds in development
 - [ ] Automatic CSS builds in development
 - [ ] Automatic server restarts in development
