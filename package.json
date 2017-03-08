@@ -1,6 +1,6 @@
 {
   "name": "nwb",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Node.js website boilerplate",
   "scripts": {
     "start": "node app.js",
@@ -19,8 +19,8 @@
   "dependencies": {
     "ejs": "2.5.6",
     "express": "4.15.2",
-    "express-cluster": "0.0.4",
     "express-winston": "2.3.0",
+    "less-middleware": "2.2.0",
     "winston": "2.3.1"
   }
 }

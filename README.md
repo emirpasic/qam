@@ -16,8 +16,8 @@ Running:
 
 Technology stack (reasoning):
 
-- [x] Node.js v6 (battle-tested worker/process based async architecture, version 6 to support for ES6 Harmony)
-- [x] ECMAScript 6 Harmony (because we like classes)
+- [x] Node.js v6 (fast and battle-tested process based async architecture, version 6 to support for ES6 Harmony)
+- [x] ECMAScript 6 (arrow functions, classes, template strings, spread, etc.)
 - [x] yarn (faster and safer than npm and removes the need for shrinkwrap)
 - [x] Express as web application framework (popular, fast, unopinionated, minimalist)
 - [x] IBM's StrongLoop PM for spawning multiple processes (more processes for more throughput using enterprise grade process management system)
@@ -25,8 +25,11 @@ Technology stack (reasoning):
 - [x] Configurations
 - [x] Routing
 - [x] EJS for templates (popular and advanced)
+- [x] LESS for CSS (less is more)
+- [ ] Partial templates
 - [ ] Error handling (40x, 50x)
-- [ ] LESS for CSS (less is more)
+- [ ] Javascript compilation and injection
+- [ ] Caching
 - [ ] Automatic Javascript builds in development
 - [ ] Automatic CSS builds in development
 - [ ] Automatic server restarts in development

@@ -15,13 +15,17 @@ const config = {
 // Environment specific
 switch (environment) {
     case 'test':
-        config.logger = {
-            level: 'info',
-            console: false,
-            file: {
-                path: `log/${config.environment}.log`,
-                maxSize: 10 * 1024 * 1024
+        config.logger = { // Logger settings
+            level: 'info', // Severity level threshold
+            console: false, // Log to console
+            file: { // Log to file if set
+                path: `log/${config.environment}.log`, // Log file path
+                maxSize: 10 * 1024 * 1024 // Max log file size in bytes
             }
+        };
+        config.less = { // LESS settings
+            debug: false, // Show more verbose logging for less compilation
+            once: true // Only recompile once after each server restart. Useful for reducing disk i/o on production.
         };
         break;
 
@@ -34,6 +38,10 @@ switch (environment) {
                 maxSize: 2 * 1024 * 1024
             }
         };
+        config.less = {
+            debug: true,
+            once: false
+        };
         break;
 
     case 'development':
@@ -45,6 +53,10 @@ switch (environment) {
                 maxSize: 50 * 1024 * 1024
             }
         };
+        config.less = {
+            debug: false,
+            once: true
+        };
         break;
 
     case 'production':
@@ -55,6 +67,10 @@ switch (environment) {
                 path: `log/${config.environment}.log`,
                 maxSize: 50 * 1024 * 1024
             }
+        };
+        config.less = {
+            debug: false,
+            once: true
         };
         break;
 
