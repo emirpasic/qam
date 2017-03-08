@@ -1,0 +1,25 @@
+{
+  "name": "nwb",
+  "version": "1.0.0",
+  "description": "Node.js website boilerplate",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emirpasic/nwb.git"
+  },
+  "author": "Emir Pasic",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/emirpasic/nwb/issues"
+  },
+  "homepage": "https://github.com/emirpasic/nwb#readme",
+  "dependencies": {
+    "express": "4.15.2",
+    "express-cluster": "0.0.4",
+    "express-winston": "2.3.0",
+    "winston": "2.3.1"
+  }
+}
