@@ -1,4 +1,4 @@
-const config = rr('config/config');
+const config = require('../config/config');
 
 module.exports = (req, res, next) => {
     res.removeHeader('X-Powered-By');

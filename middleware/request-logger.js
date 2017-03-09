@@ -1,5 +1,5 @@
 const expressWinston = require('express-winston');
-const logger = rr('util/logger');
+const logger = require('../util/logger');
 
 module.exports = expressWinston.logger({
     transports: logger.loggers,

@@ -1,4 +1,4 @@
-const config = rr('config/config');
+const config = require('../config/config');
 const winston = require('winston');
 const util = require('util');
 

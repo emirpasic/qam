@@ -1,4 +1,5 @@
-const deepFreeze = rr('util/object').deepFreeze;
+const os = require('os');
+const deepFreeze = require('../util/object').deepFreeze;
 
 const environment = process.env.NODE_ENV;
 const port = process.env.PORT || 4000;
@@ -8,7 +9,10 @@ const config = {
     environment: environment,
     server: {
         name: 'nwb',
-        port: port
+        port: port,
+        cluster: {
+            workers: os.cpus().length
+        }
     }
 };
 
@@ -24,12 +28,13 @@ switch (environment) {
             }
         };
         config.less = { // LESS settings
-            debug: false, // Show more verbose logging for less compilation
+            debug: true, // Show more verbose logging for LESS compilation
             once: true // Only recompile once after each server restart. Useful for reducing disk i/o on production.
         };
         break;
 
     case 'local':
+        config.server.cluster = false; // Can't debug in multi-processed environment
         config.logger = {
             level: 'debug',
             console: true,
@@ -39,7 +44,7 @@ switch (environment) {
             }
         };
         config.less = {
-            debug: true,
+            debug: false,
             once: false
         };
         break;
