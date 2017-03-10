@@ -31,7 +31,7 @@ Technology stack (reasoning):
 - [x] LESS for CSS (less is more)
 - [x] Partial templates with EJS (simple and no magic from using other libraries)
 - [ ] Error handling (40x, 50x)
-- [ ] Javascript compilation and injection
+- [x] Javascript compilation and injection
 - [x] Watchers for automatic frontend Javascript builds in development
 - [x] Watchers for automatic LESS compilations in development
 - [x] Watchers for automatic server restarts in development with nodemon

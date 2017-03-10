@@ -16,7 +16,6 @@ const sourcemaps = require('gulp-sourcemaps');
 gulp.task('default', ['dev']);
 
 gulp.task('dev', (cb) => {
-    require('./util/logger');
     let started = false;
     return nodemon({
         script: 'app.js',
@@ -28,7 +27,7 @@ gulp.task('dev', (cb) => {
                 if (path.extname(file) === '.less')
                     tasks.add('less:compile');
                 if (path.extname(file) === '.jsx')
-                    tasks.add('js:compile');
+                    tasks.add('jsx:compile');
             });
             return [...tasks];
         }
@@ -55,7 +54,7 @@ gulp.task('less:compile', () => {
         .pipe(gulp.dest('public/css'));
 });
 
-gulp.task('js:compile', () => {
+gulp.task('jsx:compile', () => {
     return browserify({ entries: 'assets/jsx/main.jsx', extensions: ['.js', '.jsx'], debug: true })
         .transform(babelify, { presets: ['es2015'] })
         .bundle()
