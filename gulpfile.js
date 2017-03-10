@@ -44,7 +44,7 @@ gulp.task('less:compile', () => {
     return gulp.src('assets/less/main.less')
         .pipe(less())
         .on('error', (err) => {
-            logger.error(`compiling LESS\n\tFile: ${err.filename}\n\tLine: ${err.line}\n\tType: ${err.type}\n\tMessage: ${err.message})`);
+            logger.error(`compiling LESS\n\tFile: ${err.filename}\n\tLine: ${err.line}\n\tType: ${err.type}\n\tMessage: ${err.message}`);
             return this;
         })
         .pipe(cssAutoPrefixer({
@@ -56,11 +56,11 @@ gulp.task('less:compile', () => {
 });
 
 gulp.task('js:compile', () => {
-    return browserify({ entries: 'assets/js/main.jsx', extensions: ['.js', '.jsx'], debug: true })
+    return browserify({ entries: 'assets/jsx/main.jsx', extensions: ['.js', '.jsx'], debug: true })
         .transform(babelify, { presets: ['es2015'] })
         .bundle()
-        .on('error', () => {
-            logger.error(arguments);
+        .on('error', (err) => {
+            logger.error(`compiling JSX\n\tFile: ${err.filename}\n\tMessage: ${err.message}`);
         })
         .pipe(mold.transformSourcesRelativeTo('./'))
         .pipe(source('main.jsx'))
