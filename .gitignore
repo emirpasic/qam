@@ -1,3 +1,12 @@
+# CSS generated from LESS files appear here, so we ignore them
+public/css/**/*.css
+
+# JSON file that will be used to cache less data across server restarts.
+# This can greatly speed up initial load time after a server restart,
+# if the less files haven't changed and the css files still exist,
+# this JSON file will mean that the less files don't need to be recompiled after a server restart.
+public/css/cache.json
+
 # Logs
 logs
 *.log

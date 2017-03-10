@@ -4,6 +4,7 @@ const path = require('path');
 const cluster = require('cluster');
 const config = require('./config/config');
 const logger = require('./util/logger');
+const routes = require('./routes/routes');
 
 if (config.server.cluster && cluster.isMaster) {
     logger.info(`Master (pid: ${process.pid}) starting ${config.server.cluster.workers} workers`);
@@ -23,6 +24,8 @@ if (config.server.cluster && cluster.isMaster) {
 
 } else {
     const app = express();
+    const publicPath = path.join(__dirname, 'public');
+    const assetsAssets = path.join(__dirname, 'assets');
 
     // View engine
     app.set('views', path.join(__dirname, 'views'));
@@ -33,22 +36,20 @@ if (config.server.cluster && cluster.isMaster) {
     app.use(require('./middleware/obscure-header'));
 
     // Routes
-    app.use('/', require('./routes/index'));
-    app.use('/about', require('./routes/about'));
+    routes(app);
 
-    // Public and private assets
-    public_path = path.join(__dirname, 'public');
-    assets_path = path.join(__dirname, 'assets');
-    app.use(lessMiddleware(assets_path, {
-        dest: public_path,
+    // LESS
+    app.use(lessMiddleware(assetsAssets, {
+        dest: publicPath,
         debug: config.less.debug,
         once: config.less.once,
-        cacheFile: path.join(public_path, 'css', 'cache.json')
+        cacheFile: path.join(publicPath, 'css', 'cache.json')
     }));
-    app.use(express.static(public_path));
+
+    // Public
+    app.use(express.static(publicPath));
 
     app.listen(config.server.port, () => {
         logger.info(`Server listening on port ${config.server.port} (pid: ${process.pid})`);
     });
-
 }

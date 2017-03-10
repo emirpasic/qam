@@ -27,7 +27,8 @@ switch (environment) {
                 maxSize: 10 * 1024 * 1024 // Max log file size in bytes
             }
         };
-        config.less = { // LESS settings
+        config.less = { // LESS settings (Ref.: https://github.com/emberfeather/less.js-middleware)
+            force: false, // Always re-compile less files on each request.
             debug: true, // Show more verbose logging for LESS compilation
             once: true // Only recompile once after each server restart. Useful for reducing disk i/o on production.
         };
@@ -44,6 +45,7 @@ switch (environment) {
             }
         };
         config.less = {
+            force: true,
             debug: false,
             once: false
         };
@@ -59,6 +61,7 @@ switch (environment) {
             }
         };
         config.less = {
+            force: false,
             debug: false,
             once: true
         };
@@ -74,6 +77,7 @@ switch (environment) {
             }
         };
         config.less = {
+            force: false,
             debug: false,
             once: true
         };

@@ -6,7 +6,6 @@ Getting started:
 - Install Node.js v6
 - Install yarn `npm install -g yarn`
 - Install dependencies `yarn`
-- Install StrongLoop PM `npm install -g strongloop`
 
 Running:
 
@@ -25,7 +24,7 @@ Technology stack (reasoning):
 - [x] Routing
 - [x] EJS for templates (popular and advanced)
 - [x] LESS for CSS (less is more)
-- [ ] Partial templates with EJS
+- [x] Partial templates with EJS (simple and no magic from using other libraries)
 - [ ] Javascript compilation and injection
 - [ ] Caching (Nginx reverse proxy cache, S3, Memcached or files)
 - [ ] Automatic Javascript builds in development
