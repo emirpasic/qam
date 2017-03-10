@@ -1,4 +1,4 @@
-# nwb
+# qam
 Node.js website boilerplate
 
 Getting started:

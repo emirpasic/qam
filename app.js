@@ -5,6 +5,7 @@ const config = require('./config/config');
 const logger = require('./util/logger');
 const routes = require('./routes/routes');
 
+// Starts a single worker
 const startWorker = () => {
     const app = express();
     app.locals.version = config.version;
@@ -28,6 +29,7 @@ const startWorker = () => {
     });
 };
 
+// Starts a cluster with multiple workers
 const startCluster = () => {
     logger.info(`Master (pid: ${process.pid}) starting ${config.server.cluster.workers} workers`);
 

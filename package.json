@@ -1,17 +1,17 @@
 {
-  "name": "nwb",
+  "name": "qam",
   "version": "0.0.0",
-  "description": "Node.js website boilerplate",
+  "description": "Node.js Web Application Framework",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/emirpasic/nwb.git"
+    "url": "git+https://github.com/emirpasic/qam.git"
   },
   "author": "Emir Pasic",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/emirpasic/nwb/issues"
+    "url": "https://github.com/emirpasic/qam/issues"
   },
-  "homepage": "https://github.com/emirpasic/nwb#readme",
+  "homepage": "https://github.com/emirpasic/qam#readme",
   "dependencies": {
     "ejs": "2.5.6",
     "express": "4.15.2",

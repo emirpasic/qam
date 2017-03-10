@@ -10,7 +10,7 @@ const config = {
     environment: environment,
     version,
     server: {
-        name: 'nwb',
+        name: 'qam',
         port: port,
         cluster: {
             workers: os.cpus().length
