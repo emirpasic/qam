@@ -1,5 +1,4 @@
 const express = require('express');
-const lessMiddleware = require('less-middleware');
 const path = require('path');
 const cluster = require('cluster');
 const config = require('./config/config');
@@ -24,8 +23,6 @@ if (config.server.cluster && cluster.isMaster) {
 
 } else {
     const app = express();
-    const publicPath = path.join(__dirname, 'public');
-    const assetsAssets = path.join(__dirname, 'assets');
 
     // View engine
     app.set('views', path.join(__dirname, 'views'));
@@ -38,16 +35,8 @@ if (config.server.cluster && cluster.isMaster) {
     // Routes
     routes(app);
 
-    // LESS
-    app.use(lessMiddleware(assetsAssets, {
-        dest: publicPath,
-        debug: config.less.debug,
-        once: config.less.once,
-        cacheFile: path.join(publicPath, 'css', 'cache.json')
-    }));
-
     // Public
-    app.use(express.static(publicPath));
+    app.use(express.static(path.join(__dirname, 'public')));
 
     app.listen(config.server.port, () => {
         logger.info(`Server listening on port ${config.server.port} (pid: ${process.pid})`);

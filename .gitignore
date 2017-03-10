@@ -1,5 +1,8 @@
-# CSS generated from LESS files appear here, so we ignore them
+# CSS generated from LESS/CSS files in assets folder appear here, so we ignore them
 public/css/**/*.css
+
+# CSS generated from LESS files appear here, so we ignore them
+public/js/**/*.js
 
 # JSON file that will be used to cache less data across server restarts.
 # This can greatly speed up initial load time after a server restart,
@@ -8,7 +11,6 @@ public/css/**/*.css
 public/css/cache.json
 
 # Logs
-logs
 *.log
 npm-debug.log*
 

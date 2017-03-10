@@ -25,7 +25,7 @@ Technology stack (reasoning):
 - [x] EJS for templates (popular and advanced)
 - [x] LESS for CSS (less is more)
 - [x] Partial templates with EJS (simple and no magic from using other libraries)
-- [ ] Javascript compilation and injection
+- [x] Javascript compilation and injection
 - [ ] Caching (Nginx reverse proxy cache, S3, Memcached or files)
 - [ ] Automatic Javascript builds in development
 - [x] Automatic CSS builds in development
