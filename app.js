@@ -23,6 +23,7 @@ if (config.server.cluster && cluster.isMaster) {
 
 } else {
     const app = express();
+    app.locals.version = config.version;
 
     // View engine
     app.set('views', path.join(__dirname, 'views'));

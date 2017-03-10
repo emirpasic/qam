@@ -6,11 +6,16 @@ Getting started:
 - Install Node.js v6
 - Install yarn `npm install -g yarn`
 - Install dependencies `yarn`
+- Install gulp `npm install -g gulp`
 
-Running:
+Running in development:
 
-- From shell `npm start`
-- From WebStorm ([settings](https://cloud.githubusercontent.com/assets/3115942/23690339/290c0450-03c1-11e7-90cf-40bad11da836.png))
+- From shell `gulp`
+- From WebStorm with debugger ([settings](https://cloud.githubusercontent.com/assets/3115942/23781962/105b8408-0551-11e7-8037-9fbbf348d73d.png))
+
+Running in production:
+
+- TODO (clusters, compilations, etc.)
 
 Technology stack (reasoning):
 
@@ -25,10 +30,10 @@ Technology stack (reasoning):
 - [x] EJS for templates (popular and advanced)
 - [x] LESS for CSS (less is more)
 - [x] Partial templates with EJS (simple and no magic from using other libraries)
-- [x] Javascript compilation and injection
-- [ ] Caching (Nginx reverse proxy cache, S3, Memcached or files)
-- [ ] Automatic Javascript builds in development
-- [x] Automatic CSS builds in development
-- [ ] Automatic server restarts in development
-- [ ] ESLint (linting for better code readability)
 - [ ] Error handling (40x, 50x)
+- [ ] Javascript compilation and injection
+- [x] Watchers for automatic frontend Javascript builds in development
+- [x] Watchers for automatic LESS compilations in development
+- [x] Watchers for automatic server restarts in development with nodemon
+- [ ] Caching (Nginx reverse proxy cache, S3, Memcached or files)
+- [ ] ESLint (linting for better code readability)

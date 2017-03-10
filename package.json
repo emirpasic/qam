@@ -19,14 +19,17 @@
     "winston": "2.3.1"
   },
   "devDependencies": {
-    "babel-cli": "6.23.0",
     "babel-preset-es2015": "6.22.0",
-    "less": "2.7.2",
-    "watch": "1.0.2"
-  },
-  "scripts": {
-    "compile-less": "lessc assets/less/main.less public/css/main.css",
-    "compile-js": "babel assets/js/main.js --out-file public/js/main.js --presets es2015 --source-maps inline",
-    "start": "node app.js"
+    "babelify": "7.3.0",
+    "browserify": "14.1.0",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "3.1.1",
+    "gulp-less": "3.3.0",
+    "gulp-nodemon": "2.2.1",
+    "gulp-rename": "1.2.2",
+    "gulp-sourcemaps": "2.4.1",
+    "mold-source-map": "0.4.0",
+    "vinyl-buffer": "1.0.0",
+    "vinyl-source-stream": "1.1.0"
   }
 }

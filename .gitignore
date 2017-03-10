@@ -1,8 +1,9 @@
-# CSS generated from LESS/CSS files in assets folder appear here, so we ignore them
+# Compiled CSS from LESS/CSS files in assets folder appear here, so we ignore them
 public/css/**/*.css
 
-# CSS generated from LESS files appear here, so we ignore them
+# Compiled Javascript from files in assets folder appear here, so we ignore them
 public/js/**/*.js
+public/js/**/*.js.map
 
 # JSON file that will be used to cache less data across server restarts.
 # This can greatly speed up initial load time after a server restart,

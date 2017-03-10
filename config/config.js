@@ -1,5 +1,6 @@
 const os = require('os');
 const deepFreeze = require('../util/object').deepFreeze;
+const version = require('../package.json').version;
 
 const environment = process.env.NODE_ENV;
 const port = process.env.PORT || 4000;
@@ -7,6 +8,7 @@ const port = process.env.PORT || 4000;
 // Defaults
 const config = {
     environment: environment,
+    version,
     server: {
         name: 'nwb',
         port: port,
@@ -27,15 +29,10 @@ switch (environment) {
                 maxSize: 10 * 1024 * 1024 // Max log file size in bytes
             }
         };
-        config.less = { // LESS settings (Ref.: https://github.com/emberfeather/less.js-middleware)
-            force: false, // Always re-compile less files on each request.
-            debug: true, // Show more verbose logging for LESS compilation
-            once: true // Only recompile once after each server restart. Useful for reducing disk i/o on production.
-        };
         break;
 
     case 'local':
-        config.server.cluster = false; // Can't debug in multi-processed environment
+        config.server.cluster = false; // Single process in local
         config.logger = {
             level: 'debug',
             console: true,
@@ -43,11 +40,6 @@ switch (environment) {
                 path: `log/${config.environment}.log`,
                 maxSize: 2 * 1024 * 1024
             }
-        };
-        config.less = {
-            force: true,
-            debug: false,
-            once: false
         };
         break;
 
@@ -59,11 +51,6 @@ switch (environment) {
                 path: `log/${config.environment}.log`,
                 maxSize: 50 * 1024 * 1024
             }
-        };
-        config.less = {
-            force: false,
-            debug: false,
-            once: true
         };
         break;
 
