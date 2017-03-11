@@ -1,6 +1,6 @@
 class Greeter {
     sayHello() {
-        alert('Test');
+        document.getElementById('greeter').style.display = 'block';
     }
 }
 
