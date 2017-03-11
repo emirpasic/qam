@@ -12,7 +12,7 @@ Node.js Web Application Framework
 ## Running in development
 
 - From shell: ` NODE_ENV=local gulp `
-- From WebStorm with debugger follow [these settings](https://cloud.githubusercontent.com/assets/3115942/23781962/105b8408-0551-11e7-8037-9fbbf348d73d.png)
+- From WebStorm follow [these settings](https://cloud.githubusercontent.com/assets/3115942/23781962/105b8408-0551-11e7-8037-9fbbf348d73d.png)
 
 ## Running in production
 

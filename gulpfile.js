@@ -13,17 +13,20 @@ const rename = require('gulp-rename');
 const source = require('vinyl-source-stream');
 const sourcemaps = require('gulp-sourcemaps');
 
-gulp.task('default', ['dev']);
+// Compiles assets and start the nodemon server.
+gulp.task('default', ['less:compile', 'jsx:compile', 'dev']);
 
+// Starts the nodemon server that automatically compiles assets and restarts on relevant file changes.
 gulp.task('dev', (cb) => {
     let started = false;
     return nodemon({
         script: 'app.js',
+        ignore: ['public', 'log'],
         ext: 'js,jsx,less,ejs',
         tasks: (changedFiles) => {
             const tasks = new Set();
             changedFiles.forEach((file) => {
-                logger.info(`Changed ${file}`);
+                logger.info(`Changed: ${file}`);
                 if (path.extname(file) === '.less')
                     tasks.add('less:compile');
                 if (path.extname(file) === '.jsx')
@@ -32,13 +35,14 @@ gulp.task('dev', (cb) => {
             return [...tasks];
         }
     }).on('start', () => {
-        if (!started) { // Avoid nodemon being started multiple times
+        if (!started) {
             cb();
             started = true;
         }
     });
 });
 
+// Compiles the LESS file 'main.less' in 'assets/less' into CSS file 'main.css' in 'public/css'
 gulp.task('less:compile', () => {
     return gulp.src('assets/less/main.less')
         .pipe(less())
@@ -54,6 +58,7 @@ gulp.task('less:compile', () => {
         .pipe(gulp.dest('public/css'));
 });
 
+// Compiles and bundles the JSX file 'main.jsx' in 'assets/jsx' into JS file 'main.js' to 'public/css'
 gulp.task('jsx:compile', () => {
     return browserify({ entries: 'assets/jsx/main.jsx', extensions: ['.js', '.jsx'], debug: true })
         .transform(babelify, { presets: ['es2015'] })

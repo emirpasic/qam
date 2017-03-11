@@ -21,9 +21,6 @@ const startWorker = () => {
     // Routes
     routes(app);
 
-    // Public
-    app.use(express.static(path.join(__dirname, 'public')));
-
     app.listen(config.server.port, () => {
         logger.info(`Server listening on port ${config.server.port} (pid: ${process.pid})`);
     });
