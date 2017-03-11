@@ -10,5 +10,9 @@ module.exports = (app) => {
     app.use(express.static(path.join(__dirname, '..', 'public')));
 
     // Not found
-    app.use(require('./404'));
+    app.use(require('./error').error404);
+
+    // Internal server error
+    app.use(require('./error').error505);
+
 };
