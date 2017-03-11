@@ -30,7 +30,7 @@ Node.js Web Application Framework
 - **public** *public assets*
   - **css** *compiled css files*
   - **js** *compiled frontend javascript*
-- **routes *server router*
+- **routes** *server router*
   - **routes.js** *entry point for all routes*
 - **util** *utility and helper functions*
 - **views** *ejs files and templates*
