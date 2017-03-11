@@ -1,4 +1,4 @@
-![qam logo](https://cloud.githubusercontent.com/assets/3115942/23819499/7e6e0f86-0607-11e7-9b7e-64649bf1ee3c.png)
+<img src="https://cloud.githubusercontent.com/assets/3115942/23819499/7e6e0f86-0607-11e7-9b7e-64649bf1ee3c.png"/>
 
 Node.js Web Application Framework
 
