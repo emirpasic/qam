@@ -2,24 +2,24 @@
 
 Node.js Web Application Framework
 
-Getting started:
+## Getting started
 
 - Install Node.js v6
-- Install yarn `npm install -g yarn`
-- Install dependencies `yarn`
-- Install gulp `npm install -g gulp`
+- Install yarn ```shell npm install -g yarn ```
+- Install dependencies ```shell yarn ```
+- Install gulp ```shell npm install -g gulp ```
 
-Running in development:
+## Running in development
 
-- From shell `NODE_ENV=local gulp`
+- From shell ```shellNODE_ENV=local gulp ```
 - From WebStorm with debugger ([settings](https://cloud.githubusercontent.com/assets/3115942/23781962/105b8408-0551-11e7-8037-9fbbf348d73d.png))
 
-Running in production:
+## Running in production
 
-- Compile your assets (`gulp jsx:compile && gulp less:compile`)
-- Start server `NODE_ENV=production node app.js`
+- Compile your assets (```shell gulp jsx:compile && gulp less:compile ```)
+- Start server ```shell NODE_ENV=production node app.js ```
 
-Technology stack (reasoning):
+## Technology stack (reasoning)
 
 - [x] Node.js v6 (fast and battle-tested process based async architecture, version 6 to support for ES6 Harmony)
 - [x] Server side ECMAScript 6 (arrow functions, classes, template strings, spread, etc.)
