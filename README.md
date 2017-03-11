@@ -1,4 +1,4 @@
-# qam
+![qam logo](https://cloud.githubusercontent.com/assets/3115942/23819499/7e6e0f86-0607-11e7-9b7e-64649bf1ee3c.png)
 
 Node.js Web Application Framework
 
@@ -21,21 +21,21 @@ Node.js Web Application Framework
 
 ## Directory structure
 
-- assets (private assets)
-  - jsx (frontend javascript that will be compiled)
-  - less (less files)
-- config (configurations)
-  - config.js (main configuration file)
-- middleware (express middleware)
-- public (public assets)
-  - css (compiled css files)
-  - js (compiled frontend javascript)
-- routes
-  - routes.js (entry point for all routes)
-- util (utility and helper functions)
-- views (ejs files and templates)
-- app.js (entry point of the application server)
-- gulpfile.js (various gulp tasks)
+- **assets** *private assets*
+  - **jsx** *frontend javascript that will be compiled*
+  - **less** *less files*
+- **config** *configurations*
+  - **config.js** *main configuration file*
+- **middleware** *express middleware*
+- **public** *public assets*
+  - **css** *compiled css files*
+  - **js** *compiled frontend javascript*
+- **routes *server router*
+  - **routes.js** *entry point for all routes*
+- **util** *utility and helper functions*
+- **views** *ejs files and templates*
+- **app.js** *entry point of the application server*
+- **gulpfile.js** *various gulp tasks*
 
 ## Technology stack (reasoning)
 
