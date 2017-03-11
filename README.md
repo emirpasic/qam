@@ -11,13 +11,31 @@ Node.js Web Application Framework
 
 ## Running in development
 
-- From shell: `shellNODE_ENV=local gulp `
+- From shell: ` NODE_ENV=local gulp `
 - From WebStorm with debugger follow [these settings](https://cloud.githubusercontent.com/assets/3115942/23781962/105b8408-0551-11e7-8037-9fbbf348d73d.png)
 
 ## Running in production
 
 - Compile your assets: ` gulp jsx:compile && gulp less:compile `
 - Start server: ` NODE_ENV=production node app.js `
+
+## Directory structure
+
+- assets (private assets)
+  - jsx (frontend javascript that will be compiled)
+  - less (less files)
+- config (configurations)
+  - config.js (main configuration file)
+- middleware (express middleware)
+- public (public assets)
+  - css (compiled css files)
+  - js (compiled frontend javascript)
+- routes
+  - routes.js (entry point for all routes)
+- util (utility and helper functions)
+- views (ejs files and templates)
+- app.js (entry point of the application server)
+- gulpfile.js (various gulp tasks)
 
 ## Technology stack (reasoning)
 
