@@ -39,18 +39,18 @@ Node.js Web Application Framework
 
 ## Technology stack (reasoning)
 
-- [x] Node.js v6 (fast and battle-tested process based async architecture, version 6 to support for ES6 Harmony)
+- [x] Node.js v6 (fast and battle-tested process based async architecture, ECMAScript 6)
 - [x] Server side ECMAScript 6 (arrow functions, classes, template strings, spread, etc.)
-- [x] yarn (faster and safer than npm and removes the need for shrinkwrap)
+- [x] yarn as packaging manager (faster and safer than npm and removes the need for shrinkwrap)
 - [x] Express as web application framework (popular, fast, unopinionated, minimalist)
 - [x] Node.js native cluster (more processes for more throughput)
 - [x] Logging with winston and winston-express
 - [x] Configurations simply though Javascript
-- [x] Routing natively with Express (simple, thus fast)
-- [x] EJS for templates (popular and advanced)
+- [x] Routing natively with Express.Router (simple, thus fast)
+- [x] EJS for templates
 - [x] LESS for CSS (less is more)
 - [x] Partial templates with EJS (simple and no magic from using other libraries)
-- [ ] Error handling (40x, 50x)
+- [x] Error handling (40x, 50x)
 - [x] Frontend side Javascript (ECMAScript 6) compilation and injection with babel and browserify
 - [x] Watchers for automatic frontend Javascript builds in development
 - [x] Watchers for automatic LESS compilations in development

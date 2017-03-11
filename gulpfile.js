@@ -51,7 +51,7 @@ gulp.task('less:compile', () => {
             return this;
         })
         .pipe(cssAutoPrefixer({
-            browsers: ['> 1%', 'Safari 7.1'],
+            browsers: ['> 1%'],
             cascade: false
         }))
         .pipe(rename(`main.css`))

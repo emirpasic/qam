@@ -13,6 +13,6 @@ module.exports = (app) => {
     app.use(require('./error').error404);
 
     // Internal server error
-    app.use(require('./error').error505);
+    app.use(require('./error').error500);
 
 };

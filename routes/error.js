@@ -16,9 +16,8 @@ module.exports.error404 = (req, res, next) => {
     res.type('txt').send(`Not found: ${req.url}`);
 };
 
-module.exports.error505 = (err, req, res, next) => {
+module.exports.error500 = (err, req, res, next) => {
     logger.error(err.message, err.stack);
-
     res.status(500);
 
     if (req.accepts('html')) {
