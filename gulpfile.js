@@ -21,8 +21,9 @@ gulp.task('dev', (cb) => {
     let started = false;
     return nodemon({
         script: 'app.js',
-        ignore: ['public', 'log'],
-        ext: 'js,jsx,less,ejs',
+        ignore: ['public/css/*', 'public/js/*', 'log/*'],
+        ext: 'js,jsx,less,ejs,json',
+        verbose: false,
         tasks: (changedFiles) => {
             const tasks = new Set();
             changedFiles.forEach((file) => {

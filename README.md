@@ -1,6 +1,17 @@
 ![qam logo](https://cloud.githubusercontent.com/assets/3115942/23819499/7e6e0f86-0607-11e7-9b7e-64649bf1ee3c.png)
 
-Node.js Web Application Framework
+Node.js Web Application Boilerplate.
+
+Quick-start your backend and frontend with this boilerplate.
+
+## Features
+
+- Start the Node.js express server in single process or multi process mode
+- Compile and bundle frontend Javascript (ECMAScript 6)
+- Compile and bundle frontend CSS from LESS
+- Logging
+- Configurations
+- Automatic server restart and compilations during development
 
 ## Getting started
 
@@ -30,7 +41,7 @@ Node.js Web Application Framework
 - **public** *public assets*
   - **css** *compiled css files*
   - **js** *compiled frontend javascript*
-- **routes** *server router*
+- **routes** *all routes*
   - **routes.js** *entry point for all routes*
 - **util** *utility and helper functions*
 - **views** *ejs files and templates*
