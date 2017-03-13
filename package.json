@@ -1,7 +1,7 @@
 {
   "name": "qam",
-  "version": "0.3.0",
-  "description": "Node.js Web Application Framework",
+  "version": "0.4.0",
+  "description": "Node.js Web Application Boilerplate",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/emirpasic/qam.git"
@@ -13,6 +13,7 @@
   },
   "homepage": "https://github.com/emirpasic/qam#readme",
   "dependencies": {
+    "cors": "2.8.1",
     "ejs": "2.5.6",
     "express": "4.15.2",
     "winston": "2.3.1"

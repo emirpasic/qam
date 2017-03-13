@@ -17,6 +17,7 @@ const startWorker = () => {
     // Middleware
     app.use(require('./middleware/request-logger'));
     app.use(require('./middleware/obscure-header'));
+    app.use(require('cors')());
 
     // Routes
     routes(app);

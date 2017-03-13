@@ -11,6 +11,8 @@ Quick-start your backend and frontend with this boilerplate.
 - Compile and bundle frontend CSS from LESS
 - Logging
 - Configurations
+- Error handling
+- CORS
 - Automatic server restart and compilations during development
 
 ## Getting started
@@ -61,7 +63,6 @@ Quick-start your backend and frontend with this boilerplate.
 - [x] EJS for templates
 - [x] LESS for CSS (less is more)
 - [x] Partial templates with EJS (simple and no magic from using other libraries)
-- [x] Error handling (40x, 50x)
 - [x] Frontend side Javascript (ECMAScript 6) compilation and injection with babel and browserify
 - [x] Watchers for automatic frontend Javascript builds in development
 - [x] Watchers for automatic LESS compilations in development
