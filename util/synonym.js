@@ -42,7 +42,7 @@ const getSynonyms = word => {
 
     const result = [];
 
-    for (let it = synonymsIndexes.values(), synonymIndex = null; synonymIndex = it.next().value;) {
+    for (let synonymIndex of synonymsIndexes) {
         const synonym = dictionary[synonymIndex];
         result.push(synonym);
     }
