@@ -24,7 +24,7 @@ Quick-start your backend and frontend with this boilerplate.
 
 ## Running in development
 
-- From shell: ` NODE_ENV=local gulp `
+- From shell: ` NODE_ENV=development gulp ` or just ` gulp `
 - From WebStorm follow [these settings](https://cloud.githubusercontent.com/assets/3115942/23781962/105b8408-0551-11e7-8037-9fbbf348d73d.png)
 
 ## Running in production
@@ -56,7 +56,6 @@ Quick-start your backend and frontend with this boilerplate.
 - [x] Server side ECMAScript 6 (arrow functions, classes, template strings, spread, etc.)
 - [x] yarn as packaging manager (faster and safer than npm and removes the need for shrinkwrap)
 - [x] Express as web application framework (popular, fast, unopinionated, minimalist)
-- [x] Node.js native cluster (more processes for more throughput)
 - [x] Logging with winston and winston-express
 - [x] Configurations simply though Javascript
 - [x] Routing natively with Express.Router (simple, thus fast)
@@ -67,5 +66,3 @@ Quick-start your backend and frontend with this boilerplate.
 - [x] Watchers for automatic frontend Javascript builds in development
 - [x] Watchers for automatic LESS compilations in development
 - [x] Watchers for automatic server restarts in development with nodemon
-- [ ] Caching (Nginx reverse proxy cache, S3, Memcached or files)
-- [ ] ESLint (linting for better code readability)
