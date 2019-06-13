@@ -10,7 +10,7 @@ module.exports = (req, res, next) => {
 
         const responseTime = new Date() - startTime;
         const url = req.originalUrl || req.url;
-        const msg = `${req.method} ${url} ${res.statusCode} ${responseTime}ms ${JSON.stringify(req.headers)}`;
+        const msg = `${req.method} ${url} ${res.statusCode} ${responseTime}ms ${req.ip} ${JSON.stringify(req.headers)}`;
 
         let logLevel = 'info';
         if (res.statusCode >= 400) logLevel = 'warn';

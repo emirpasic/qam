@@ -1,4 +1,4 @@
-const config = require('../config/config');
+const config = require('../server-config');
 const winston = require('winston');
 const util = require('util');
 
@@ -8,9 +8,11 @@ if (config.logger.console) {
     loggers.push(
         new winston.transports.Console({
             level: config.logger.level,
-            colorize: true
-        })
-    );
+            format: winston.format.combine(
+                winston.format.colorize(),
+                winston.format.simple()
+            ),
+        }));
 }
 if (config.logger.file) {
     loggers.push(
@@ -18,20 +20,17 @@ if (config.logger.file) {
             level: config.logger.level,
             filename: config.logger.file.path,
             maxsize: config.logger.file.maxSize,
-            json: false
-        })
-    );
+            format: winston.format.simple(),
+        }));
 }
 
-const logger = new (winston.Logger)({
-    transports: loggers
-});
+const logger = winston.createLogger({ transports: loggers });
 
 // Override the default console logging
-const formatArgs = (args) => {
+const formatArgs = args => {
     return [util.format.apply(util.format, Array.prototype.slice.call(args))];
 };
-console.log = function() {
+console.log = function() { // eslint-disable-line
     logger.info.apply(logger, formatArgs(arguments));
 };
 console.info = function() {
@@ -43,7 +42,7 @@ console.warn = function() {
 console.error = function() {
     logger.error.apply(logger, formatArgs(arguments));
 };
-console.debug = function() {
+console.debug = function() { // eslint-disable-line
     logger.debug.apply(logger, formatArgs(arguments));
 };
 

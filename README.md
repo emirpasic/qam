@@ -17,10 +17,10 @@ Quick-start your backend and frontend with this boilerplate.
 
 ## Getting started
 
-- Install [Node.js](https://nodejs.org/en/) v6
+- Install [Node.js](https://nodejs.org/en/) v6 or higher
 - Install yarn: ` npm install -g yarn `
-- Install dependencies: ` yarn `
 - Install gulp: ` npm install -g gulp `
+- Install dependencies: ` yarn `
 
 ## Running in development
 
@@ -30,7 +30,7 @@ Quick-start your backend and frontend with this boilerplate.
 ## Running in production
 
 - Compile your assets: ` gulp jsx:compile && gulp less:compile `
-- Start server: ` NODE_ENV=production node app.js `
+- Start server: ` NODE_ENV=production node server.js `
 
 ## Directory structure
 

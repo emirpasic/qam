@@ -1,17 +1,21 @@
 const express = require('express');
 const path = require('path');
 const cluster = require('cluster');
-const config = require('./config/config');
+const config = require('./server-config');
 const logger = require('./util/logger');
-const routes = require('./routes/routes');
+const bodyParser = require('body-parser');
 
 // Starts a single worker
 const startWorker = () => {
     const app = express();
-    app.locals.version = config.version;
+
+    // Configuration
+    app.enable('trust proxy');
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: true }));
 
     // View engine
-    app.set('views', path.join(__dirname, 'views'));
+    app.set('views', path.join(__dirname, 'view'));
     app.set('view engine', 'ejs');
 
     // Middleware
@@ -19,11 +23,15 @@ const startWorker = () => {
     app.use(require('./middleware/obscure-header'));
     app.use(require('cors')());
 
+    // Public static folder
+    app.use(express.static(path.join(__dirname, 'public')));
+
     // Routes
+    const routes = require(`./route/route`);
     routes(app);
 
     app.listen(config.server.port, () => {
-        logger.info(`Server listening on port ${config.server.port} (pid: ${process.pid})`);
+        logger.info(`Server listening on port ${config.server.port} (pid: ${process.pid}) (node: ${process.version})`);
     });
 };
 

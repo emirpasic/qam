@@ -1,35 +1,43 @@
 {
   "name": "qam",
-  "version": "0.4.0",
+  "version": "1.0.0",
+  "private": false,
   "description": "Node.js Web Application Boilerplate",
+  "homepage": "https://github.com/emirpasic/qam#readme",
+  "bugs": {
+    "url": "https://github.com/emirpasic/qam/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/emirpasic/qam.git"
   },
-  "author": "Emir Pasic",
   "license": "BSD-3-Clause",
-  "bugs": {
-    "url": "https://github.com/emirpasic/qam/issues"
-  },
-  "homepage": "https://github.com/emirpasic/qam#readme",
+  "author": "Emir Pasic",
+  "main": "index.js",
   "dependencies": {
-    "cors": "2.8.1",
-    "ejs": "2.5.6",
-    "express": "4.15.2",
-    "winston": "2.3.1"
+    "body-parser": "1.19.0",
+    "cors": "2.8.5",
+    "ejs": "2.6.1",
+    "express": "4.17.1",
+    "memcached": "2.2.2",
+    "memory-cache": "0.2.0",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-router": "5.0.1",
+    "redis": "2.8.0",
+    "winston": "3.2.1"
   },
   "devDependencies": {
-    "babel-preset-es2015": "6.22.0",
-    "babelify": "7.3.0",
-    "browserify": "14.1.0",
-    "gulp": "3.9.1",
-    "gulp-autoprefixer": "3.1.1",
-    "gulp-less": "3.3.0",
-    "gulp-nodemon": "2.2.1",
-    "gulp-rename": "1.2.2",
-    "gulp-sourcemaps": "2.4.1",
-    "mold-source-map": "0.4.0",
-    "vinyl-buffer": "1.0.0",
-    "vinyl-source-stream": "1.1.0"
+    "autoprefixer": "9.6.0",
+    "babel-eslint": "10.0.1",
+    "cssnano": "4.1.10",
+    "eslint": "5.16.0",
+    "eslint-plugin-react": "7.13.0",
+    "gulp": "4.0.2",
+    "gulp-eslint": "5.0.0",
+    "gulp-postcss": "8.0.0",
+    "gulp-sass": "4.0.2",
+    "gulp-sourcemaps": "2.6.5",
+    "nodemon": "1.19.1"
   }
 }
