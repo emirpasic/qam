@@ -24,8 +24,7 @@ Quick-start your backend and frontend with this boilerplate.
 
 ## Running in development
 
-- From shell: ` NODE_ENV=local gulp `
-- From WebStorm follow [these settings](https://cloud.githubusercontent.com/assets/3115942/23781962/105b8408-0551-11e7-8037-9fbbf348d73d.png)
+- From shell: ` gulp `
 
 ## Running in production
 
@@ -52,7 +51,7 @@ Quick-start your backend and frontend with this boilerplate.
 
 ## Technology stack (reasoning)
 
-- [x] Node.js v6 (fast and battle-tested process based async architecture, ECMAScript 6)
+- [x] Node.js v6 or higher (fast and battle-tested process based async architecture, ECMAScript 6)
 - [x] Server side ECMAScript 6 (arrow functions, classes, template strings, spread, etc.)
 - [x] yarn as packaging manager (faster and safer than npm and removes the need for shrinkwrap)
 - [x] Express as web application framework (popular, fast, unopinionated, minimalist)
@@ -61,11 +60,11 @@ Quick-start your backend and frontend with this boilerplate.
 - [x] Configurations simply though Javascript
 - [x] Routing natively with Express.Router (simple, thus fast)
 - [x] EJS for templates
-- [x] LESS for CSS (less is more)
+- [x] SASS for CSS (organized CSS)
 - [x] Partial templates with EJS (simple and no magic from using other libraries)
 - [x] Frontend side Javascript (ECMAScript 6) compilation and injection with babel and browserify
 - [x] Watchers for automatic frontend Javascript builds in development
-- [x] Watchers for automatic LESS compilations in development
+- [x] Watchers for automatic SASS compilations in development
 - [x] Watchers for automatic server restarts in development with nodemon
-- [ ] Caching (Nginx reverse proxy cache, S3, Memcached or files)
-- [ ] ESLint (linting for better code readability)
+- [x] Caching (In-memory, Redis or memcached)
+- [x] ESLint (linting for better code readability)

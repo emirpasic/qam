@@ -7,7 +7,7 @@ const cssnano = require('cssnano');
 const nodemon = require('nodemon');
 const logger = require('./util/logger');
 
-// Checks all JavaScript files f
+// Checks all JavaScript files
 gulp.task('eslint', () => {
     return gulp.src(
         [
@@ -57,3 +57,22 @@ gulp.task('server', cb => {
         }
     });
 });
+
+// Run the development environment
+gulp.task('development',
+    gulp.series(
+        gulp.parallel(
+            'sass:compile:development',
+            gulp.series(
+                'eslint',
+                // TODO jsx  compile
+            ),
+        ),
+        'server',
+        // TODO 'watch',
+    ));
+
+// TODO production
+
+// Run development task as the default
+gulp.task('default', gulp.series('development'));
